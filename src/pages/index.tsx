@@ -45,14 +45,36 @@ export default function Home() {
           </div>
 
           <div className={styles.Alumni}>
-              <p className={styles.RegularText}>
-                Our Alumni's Work in Top Companies
-              </p>
+            <p className={styles.RegularText}>
+              Our Alumni's Work in Top Companies
+            </p>
 
-              <img src="https://i.ibb.co/WG0KLw3/j-Ckblq-GXg1-Tb64y-Ru-Cx6-CIvq-VI.webp" className={styles.CompanyImage} />
+            <img src="https://i.ibb.co/WG0KLw3/j-Ckblq-GXg1-Tb64y-Ru-Cx6-CIvq-VI.webp" className={styles.CompanyImage} />
+            <Benefits />
+          </div>
+
+          <div className={styles.Apart}>
+            <h1 className={styles.Heading}>What sets<br />our Course Apart</h1>
+
+            <div>
+              <div className={styles.FeatureContainer}>
+                <img src="https://i.ibb.co/qd54Hkm/image-61.png" />
+                <div className={styles.Details}>
+                  <h2 className={styles.SubTitle}>Comprehensive Curriculum</h2>
+                  <ul className={styles.FeaturesList}>
+                    <li className={styles.Features}>Learn core of Python Programming along with design patterns & SWE principles</li>
+                    <li className={styles.Features}>Learn core mathematics required for Machine learning and learn how it is used in AI</li>
+                    <li className={styles.Features}>Learn Core Machine Learning (like 10 hours just for learning regression while others spend just 1 hour)</li>
+                    <li className={styles.Features}>Learn Advanced ML including MLOps and it's tools and techniques </li>
+                  </ul>
+                </div>
+
+              </div>
+
             </div>
+          </div>
 
-          <Benefits />
+
 
         </div>
 

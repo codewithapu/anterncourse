@@ -2,8 +2,6 @@
     transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-
-
 .NavBar {
     max-width: 200rem;
     z-index: 100;
@@ -16,16 +14,18 @@
     justify-content: space-between;
     background-color: #080808;
     padding: 1rem 2rem;
-    border-bottom: 1px solid #2B2B2B;
+    border-bottom: 1px solid #2b2b2b;
 
     .LogoLink {
         .Logo {
             height: 4.5rem;
         }
     }
-    
 
     .Button {
+        @media only screen and (max-width: 850px) {
+            display: none;
+        }
         display: flex;
         padding: 1.6rem 2rem;
         justify-content: center;
@@ -47,16 +47,19 @@
         text-decoration: none;
         letter-spacing: 0.05rem;
         @include Smooth();
-        &:hover{
+        &:hover {
             background-color: #110ad5;
         }
     }
 
-    .NavLinkContainer{
+    .NavLinkContainer {
+        @media only screen and (max-width: 850px) {
+            display: none;
+        }
         display: flex;
         // gap: 0.5rem;
         justify-content: center;
-        .NavLink{
+        .NavLink {
             padding: 2rem 1.5rem;
             color: #fff;
 
@@ -70,12 +73,12 @@
             opacity: 0.5;
 
             @include Smooth();
-            &:hover{
+            &:hover {
                 opacity: 1;
             }
         }
 
-        .Active{
+        .Active {
             opacity: 1;
             padding: 2rem 1.5rem;
             color: #fff;
@@ -91,4 +94,15 @@
         }
     }
 
+    .Hamburger {
+        @media only screen and (max-width: 850px) {
+            display: block;
+        }
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
 }
+
+
