@@ -11,7 +11,7 @@ export default function Benefits() {
     <>
       <Swiper
         slidesPerView={1}
-        spaceBetween={10}
+        spaceBetween={50}
 
         className={styles.mySwiper}
       >
