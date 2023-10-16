@@ -1,0 +1,94 @@
+@mixin Smooth {
+    transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+
+
+.NavBar {
+    max-width: 200rem;
+    z-index: 100;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #080808;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #2B2B2B;
+
+    .LogoLink {
+        .Logo {
+            height: 4.5rem;
+        }
+    }
+    
+
+    .Button {
+        display: flex;
+        padding: 1.6rem 2rem;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 0.6rem;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+
+        background-color: #0800ff;
+        color: #fffbfb;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 700;
+        // line-height: 200%;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.05rem;
+        @include Smooth();
+        &:hover{
+            background-color: #110ad5;
+        }
+    }
+
+    .NavLinkContainer{
+        display: flex;
+        // gap: 0.5rem;
+        justify-content: center;
+        .NavLink{
+            padding: 2rem 1.5rem;
+            color: #fff;
+
+            font-family: Plus Jakarta Sans;
+            font-size: 1.3rem;
+            font-style: normal;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.05rem;
+            opacity: 0.5;
+
+            @include Smooth();
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        .Active{
+            opacity: 1;
+            padding: 2rem 1.5rem;
+            color: #fff;
+
+            font-family: Plus Jakarta Sans;
+            font-size: 1.3rem;
+            font-style: normal;
+            font-weight: 700;
+            // line-height: 200%;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.05rem;
+        }
+    }
+
+}

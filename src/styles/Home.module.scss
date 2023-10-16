@@ -1,0 +1,227 @@
+@mixin Smooth {
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+// Benefits Starts Here
+
+.mySwiper {
+  width: 100%;
+  max-width: 102rem;
+  color: #fff;
+  cursor: grab;
+  overflow: hidden;
+  padding: 4rem;
+
+  .SwiperContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-direction: row;
+
+    .LearnerPic {
+      height: auto;
+      width: auto;
+      transform: perspective(400px) rotateY(3deg);
+      @media only screen and (max-width: 850px) {
+        transform: perspective(0px) rotateY(0deg);
+      }
+
+      @media only screen and (max-width: 600px) {
+        transform: perspective(0px) rotateY(0deg);
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 850px) {
+      flex-direction: column;
+      padding: 1rem;
+
+      border-radius: 2.5rem;
+      // border: 1px solid #111;
+    }
+
+    @media only screen and (max-width: 600px) {
+      border: 1px solid #111;
+    }
+
+    .Chats {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 3rem;
+      @media only screen and (max-width: 850px) {
+        flex-direction: column;
+      }
+
+      .Profile {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        .Name {
+          font-family: Inter;
+          color: #fff;
+          font-size: 1.8rem;
+          font-weight: 400;
+        }
+
+        .Avatar {
+          height: 4rem;
+          border-radius: 100rem;
+        }
+      }
+
+      .ChatContainer {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+
+        .Chatting {
+          display: flex;
+          gap: 0.3rem;
+          flex-direction: column;
+          .ChatOne {
+            border-radius: 15px 15px 0px 0px;
+            background: #0812ff;
+            font-weight: 500;
+
+            font-size: 1.6rem;
+            display: inline;
+            padding: 15px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: auto;
+            flex-wrap: nowrap;
+            width: 10.5rem;
+          }
+
+          .ChatTwo {
+            font-size: 1.6rem;
+            border-radius: 0px 0px 15px 15px;
+            background: #0812ff;
+            font-weight: 500;
+
+            display: flex;
+            padding: 15px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            max-width: 40rem;
+          }
+        }
+        .UserStatus {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          flex-direction: row;
+          align-items: center;
+          padding: 0rem 1rem;
+          .AvatarBadge {
+            height: 1.5rem;
+          }
+          .Status {
+            color: #9b9b9b;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140.625%; /* 21.094px */
+          }
+        }
+      }
+    }
+  }
+}
+
+// Benefits Ends Here
+
+.Wraper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .Container {
+    margin-top: 7.5rem;
+    width: 100%;
+    max-width: 200rem;
+    display: flex;
+    flex-direction: column;
+
+    .Hero {
+      background-image: url(../../public/back.jpg);
+      box-shadow: 200rem 4px 4px 0px rgba(0, 0, 0, 0.75) inset;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      padding: 10rem 4rem;
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      flex-direction: column;
+      .CourseTitle {
+        color: #fff;
+
+        font-family: Antern Bold;
+        font-size: 4rem;
+        line-height: 90%;
+        letter-spacing: -0.1rem;
+        // text-transform: lowercase;
+        max-width: 70%;
+      }
+      .CourseDescription {
+        font-family: Antern Regular;
+        color: #989898;
+        max-width: 50%;
+        font-size: 1.8rem;
+      }
+
+      .MoreDetails {
+        .AuthorLink {
+          text-decoration: none;
+          .Author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            gap: 2rem;
+            font-size: 2rem;
+            .AuthorAvatar {
+              height: 5rem;
+              border-radius: 100rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Alumni {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 2rem;
+    .RegularText {
+      font-size: 1.8rem;
+      font-family: Antern Bold;
+      color: #ddd;
+      letter-spacing: 0rem;
+    }
+
+    .CompanyImage {
+      height: 4rem;
+      opacity: 0.9;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
