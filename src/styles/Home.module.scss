@@ -5,6 +5,7 @@
 // Benefits Starts Here
 
 .mySwiper {
+  margin-top: 4rem;
   width: 100%;
   max-width: auto;
   color: #fff;
@@ -107,7 +108,7 @@
             background: #0812ff;
             font-weight: 500;
 
-            font-size: 1.6rem;
+            font-size: 1.55rem;
             display: inline;
             padding: 15px 16px;
             justify-content: center;
@@ -119,7 +120,7 @@
           }
 
           .ChatTwo {
-            font-size: 1.6rem;
+            font-size: 1.55rem;
             border-radius: 0px 0px 15px 15px;
             background: #0812ff;
             font-weight: 500;
@@ -179,11 +180,12 @@
       // background-image: url(../../public/back.jpg);
       box-shadow: 200rem 4px 4px 0px rgba(0, 0, 0, 0.75) inset;
       width: 100%;
+      background: linear-gradient(180deg, #080808 0%, #040a00 100%);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
 
-      padding: 10rem 10rem;
+      padding: 5rem 10rem;
       display: flex;
       gap: 2.5rem;
       align-items: flex-start;
@@ -192,31 +194,41 @@
       justify-content: space-between;
 
       @media only screen and (max-width: 950px) {
-        padding: 10rem 2rem;
-        flex-direction: column;
+        padding: 6rem 2rem;
+        flex-direction: column-reverse;
+      }
+
+      @media only screen and (max-width: 950px) {
+        gap: 4rem;
       }
 
       .Banner {
-        height: 40rem;
+        height: 50rem;
         @media only screen and (max-width: 950px) {
           width: 100%;
+          height: 0rem;
           object-fit: contain;
+          height: 25rem;
         }
       }
       .Left {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 2rem;
+
         .Topic {
           color: #fffbfb;
-          font-family: Plus Jakarta Sans;
+          font-family: Inter;
           font-size: 1.3rem;
           font-style: normal;
-          font-weight: 700;
-          // line-height: 200%;
+          font-weight: 600;
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 0.05rem;
+          @media only screen and (max-width: 950px) {
+            font-size: 1.2rem;
+            color: #4dff9f;
+          }
         }
         .CourseTitle {
           color: #fff;
@@ -224,23 +236,33 @@
           font-family: Inter;
           font-size: 6rem;
           line-height: 90%;
+          font-weight: 600;
           letter-spacing: -0.1rem;
-          // text-transform: lowercase;
-          max-width: 80%;
+
+          @media only screen and (max-width: 950px) {
+            max-width: 100%;
+            line-height: 120%;
+            font-size: 3.5rem;
+          }
         }
         .CourseDescription {
           font-family: Inter;
           color: #989898;
           max-width: 60%;
           font-size: 1.8rem;
+          line-height: 150%;
+          @media only screen and (max-width: 950px) {
+            max-width: 100%;
+            font-size: 1.4rem;
+          }
         }
 
         .Button {
           @media only screen and (max-width: 850px) {
-            display: none;
+            width: 100%;
           }
 
-          padding: 1.6rem 2rem;
+          padding: 1.8rem 2rem;
           justify-content: center;
           align-items: center;
           gap: 10px;
@@ -254,9 +276,10 @@
           background-color: #0800ff;
           color: #fffbfb;
           font-family: Plus Jakarta Sans;
+          font-family: Inter;
           font-size: 1.3rem;
           font-style: normal;
-          font-weight: 700;
+          font-weight: 600;
           // line-height: 200%;
           text-transform: uppercase;
           text-decoration: none;
@@ -277,11 +300,11 @@
     justify-content: center;
     flex-direction: column;
     padding: 3rem 2rem;
-    gap: 2rem;
-    // margin: 3rem;
+    gap: 1.5rem;
     .RegularText {
-      font-size: 1.8rem;
-      font-family: Antern Bold;
+      font-size: 1.6rem;
+      font-family: Inter;
+      font-weight: 600;
       color: #ddd;
       letter-spacing: 0rem;
     }
@@ -311,6 +334,9 @@
       line-height: 90%;
       color: #fff;
       letter-spacing: -0.1rem;
+      @media only screen and (max-width: 950px) {
+        font-size: 5rem;
+      }
     }
 
     .FeatureContainer {
