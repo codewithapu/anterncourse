@@ -176,49 +176,94 @@
     }
 
     .Hero {
-      background-image: url(../../public/back.jpg);
+      // background-image: url(../../public/back.jpg);
       box-shadow: 200rem 4px 4px 0px rgba(0, 0, 0, 0.75) inset;
       width: 100%;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
 
-      padding: 10rem 4rem;
+      padding: 10rem 10rem;
       display: flex;
       gap: 2.5rem;
       align-items: flex-start;
-      flex-direction: column;
-      .CourseTitle {
-        color: #fff;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
 
-        font-family: Antern Bold;
-        font-size: 4rem;
-        line-height: 90%;
-        letter-spacing: -0.1rem;
-        // text-transform: lowercase;
-        max-width: 70%;
-      }
-      .CourseDescription {
-        font-family: Antern Regular;
-        color: #989898;
-        max-width: 50%;
-        font-size: 1.8rem;
+      @media only screen and (max-width: 950px) {
+        padding: 10rem 2rem;
+        flex-direction: column;
       }
 
-      .MoreDetails {
-        .AuthorLink {
+      .Banner {
+        height: 40rem;
+        @media only screen and (max-width: 950px) {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      .Left {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        .Topic {
+          color: #fffbfb;
+          font-family: Plus Jakarta Sans;
+          font-size: 1.3rem;
+          font-style: normal;
+          font-weight: 700;
+          // line-height: 200%;
+          text-transform: uppercase;
           text-decoration: none;
-          .Author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            gap: 2rem;
-            font-size: 2rem;
-            .AuthorAvatar {
-              height: 5rem;
-              border-radius: 100rem;
-            }
+          letter-spacing: 0.05rem;
+        }
+        .CourseTitle {
+          color: #fff;
+
+          font-family: Inter;
+          font-size: 6rem;
+          line-height: 90%;
+          letter-spacing: -0.1rem;
+          // text-transform: lowercase;
+          max-width: 80%;
+        }
+        .CourseDescription {
+          font-family: Inter;
+          color: #989898;
+          max-width: 60%;
+          font-size: 1.8rem;
+        }
+
+        .Button {
+          @media only screen and (max-width: 850px) {
+            display: none;
+          }
+
+          padding: 1.6rem 2rem;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          border-radius: 0.6rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 13rem;
+
+          background-color: #0800ff;
+          color: #fffbfb;
+          font-family: Plus Jakarta Sans;
+          font-size: 1.3rem;
+          font-style: normal;
+          font-weight: 700;
+          // line-height: 200%;
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 0.05rem;
+          @include Smooth();
+          &:hover {
+            background-color: #110ad5;
           }
         }
       }
@@ -268,8 +313,7 @@
       letter-spacing: -0.1rem;
     }
 
-
-    .FeatureContainer{
+    .FeatureContainer {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -288,8 +332,8 @@
           color: #fff;
           letter-spacing: -0.05rem;
         }
-        .FeaturesList{
-          .Features{
+        .FeaturesList {
+          .Features {
             color: #fff;
             line-height: 200%;
             font-size: 1.8rem;

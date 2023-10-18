@@ -7,11 +7,7 @@ import Link from 'next/link'
 import Benefits from '@/components/Courses/Benefits';
 
 export default function Home() {
-  const cards = [
-    { title: "Card 1", content: "This is card 1 content." },
-    { title: "Card 2", content: "This is card 2 content." },
-    { title: "Card 3", content: "This is card 3 content." },
-  ];
+
   return (
     <>
       <Head>
@@ -27,20 +23,17 @@ export default function Home() {
         <div className={styles.Container}>
 
           <div className={styles.Hero}>
-            <h1 className={styles.CourseTitle}>Core Machine Learning Engineering</h1>
 
-            <p className={styles.CourseDescription}>Learn how to code, understand algorithms, and apply real-world projects even if you're new to the field! </p>
+            <div className={styles.Left}>
+              <p className={styles.Topic}>machine learning</p>
 
+              <h1 className={styles.CourseTitle}>Core Machine Learning Engineering</h1>
+              <p className={styles.CourseDescription}>Learn how to code, understand algorithms, and apply real-world projects even if you're new to the field! </p>
 
-            {/* <div className={styles.MoreDetails}>
-              <Link href="/" className={styles.AuthorLink}>
-                <div className={styles.Author}>
-                  <img className={styles.AuthorAvatar} src="https://i.ibb.co/HN3WX0w/image-56.jpg" />
-                  <p className={styles.Name}>Ayush Singh</p>
-                </div>
-              </Link>
-            </div> */}
+              <Link href="/" className={styles.Button}>Get Started</Link>
+            </div>
 
+            <img className={styles.Banner} src="./antern.png" />
 
           </div>
 
@@ -53,7 +46,7 @@ export default function Home() {
             <Benefits />
           </div>
 
-          <div className={styles.Apart}>
+          {/* <div className={styles.Apart}>
             <h1 className={styles.Heading}>What sets<br />our Course Apart</h1>
 
             <div>
@@ -72,8 +65,7 @@ export default function Home() {
               </div>
 
             </div>
-          </div>
-
+          </div> */}
 
 
         </div>
