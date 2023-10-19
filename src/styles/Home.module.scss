@@ -351,7 +351,7 @@
     padding: 5rem 5rem;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     gap: 5rem;
 
@@ -384,9 +384,41 @@
     .FeatureCard {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       gap: 3rem;
       flex-direction: row;
+      max-width: 80rem;
+      width: 100%;
+      @media only screen and (max-width: 850px) {
+        flex-direction: column;
+      }
+      .Image {
+        height: 29rem;
+      }
+      .MoreDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #fff;
+        gap: 2rem;
+        .FeaturesLabel {
+          font-size: 2.5rem;
+          @media only screen and (max-width: 850px) {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .FeatureCardReverse {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      flex-direction: row-reverse;
+
+      max-width: 80rem;
+      width: 100%;
       @media only screen and (max-width: 850px) {
         flex-direction: column;
       }
@@ -408,4 +440,5 @@
       }
     }
   }
+  
 }

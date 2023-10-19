@@ -12,7 +12,6 @@ const List: React.FC<Props> = ({ items }) => {
         <ul>
             {items.map((item, index) => (
                 <li className={styles.List} key={index}>
-
                     <img className={styles.Marker} src="./marker.png"/>
                     {item}
                 </li>

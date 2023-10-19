@@ -1,0 +1,50 @@
+@mixin Smooth {
+    transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.Footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #080808;
+    padding: 0rem 2rem;
+    gap: 2.5rem;
+    border-bottom: 1px solid #2b2b2b;
+
+    @media only screen and (max-width: 850px) {
+        padding: 1rem 2rem;
+    }
+
+    .Copyright {
+        color: #8a8a8a;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.2rem;
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        letter-spacing: 1px;
+        border-top: 0.2rem solid #404040;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .FooterLinkContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 0.7rem;
+        .Button{
+            height: 4rem;
+            width: 4rem;
+            @media only screen and (max-width: 850px){
+                svg{
+                    fill: #111;
+                }
+            }
+        }
+    }
+}
