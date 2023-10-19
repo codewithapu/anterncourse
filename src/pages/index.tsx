@@ -5,8 +5,16 @@ import NavBar from '@/components/NavBar'
 import Link from 'next/link'
 
 import Benefits from '@/components/Courses/Benefits';
+import List from '@/components/Courses/List'
 
 export default function Home() {
+
+  const reasons = [
+    "Design Patterns & SWE Principles",
+    "Understand AI: Essential Math Concepts",
+    "Comprehensive ML: Focus on Regression",
+    "Advanced ML: MLOps & Key Techniques"
+  ];
 
   return (
     <>
@@ -46,26 +54,22 @@ export default function Home() {
             <Benefits />
           </div>
 
-          {/* <div className={styles.Apart}>
-            <h1 className={styles.Heading}>What sets<br />our Course Apart</h1>
+          <div className={styles.Features}>
+            <h1 className={styles.SectionHeading}>
+              Why Is Our Course a Top Choice?
+            </h1>
 
-            <div>
-              <div className={styles.FeatureContainer}>
-                <img src="https://i.ibb.co/qd54Hkm/image-61.png" />
-                <div className={styles.Details}>
-                  <h2 className={styles.SubTitle}>Comprehensive Curriculum</h2>
-                  <ul className={styles.FeaturesList}>
-                    <li className={styles.Features}>Learn core of Python Programming along with design patterns & SWE principles</li>
-                    <li className={styles.Features}>Learn core mathematics required for Machine learning and learn how it is used in AI</li>
-                    <li className={styles.Features}>Learn Core Machine Learning (like 10 hours just for learning regression while others spend just 1 hour)</li>
-                    <li className={styles.Features}>Learn Advanced ML including MLOps and it's tools and techniques </li>
-                  </ul>
+            <div className={styles.FeatureCard}>
+              <img src="./curriculum.png" className={styles.Image}/>
+              <div className={styles.MoreDetails}>
+                <h2 className={styles.FeaturesLabel}>Comprehensive Curriculum</h2>
+                <div className={styles.ListContainer}>
+                  <List items={reasons} />
                 </div>
-
               </div>
 
             </div>
-          </div> */}
+          </div>
 
 
         </div>

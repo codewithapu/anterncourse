@@ -159,6 +159,33 @@
 
 // Benefits Ends Here
 
+// List Starts Here
+
+.List {
+  color: #fff;
+  font-family: Inter;
+  list-style-type: none;
+  font-size: 2rem;
+  line-height: 200%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: row;
+  align-items: center;
+  @media only screen and (max-width: 850px) {
+    font-size: 1.6rem;
+    gap: 1rem;
+  }
+  .Marker {
+    height: 2rem;
+    @media only screen and (max-width: 850px) {
+      height: 1.3rem;
+    }
+  }
+}
+
+// List Ends Here
+
 .Wraper {
   display: flex;
   align-items: center;
@@ -193,7 +220,7 @@
       align-items: center;
       justify-content: space-between;
 
-      @media only screen and (max-width: 950px) {
+      @media only screen and (max-width: 1000px) {
         padding: 6rem 2rem;
         flex-direction: column-reverse;
       }
@@ -248,7 +275,7 @@
         .CourseDescription {
           font-family: Inter;
           color: #989898;
-          max-width: 60%;
+          // max-width: 60%;
           font-size: 1.8rem;
           line-height: 150%;
           @media only screen and (max-width: 950px) {
@@ -271,8 +298,10 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 13rem;
-
+          width: 13.5rem;
+          flex-wrap: wrap;
+          flex-grow: 1;
+          flex-shrink: 0;
           background-color: #0800ff;
           color: #fffbfb;
           font-family: Plus Jakarta Sans;
@@ -317,55 +346,63 @@
     }
   }
 
-  .Apart {
+  .Features {
     display: flex;
-    flex-direction: column;
+    padding: 5rem 5rem;
+    width: 100%;
     align-items: center;
-    gap: 4rem;
-    .Heading {
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+
+    @media only screen and (max-width: 850px) {
+      padding: 5rem 2rem;
+    }
+    .SectionHeading {
+      text-align: center;
+      font-family: Inter;
+      font-size: 7rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 135px */
+      letter-spacing: -2.5px;
+      color: #fff;
+      width: 50%;
+
       background: linear-gradient(180deg, #fff 0.1%, rgba(227, 228, 255, 0) 355.66%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-weight: 700;
-      font-family: Urbanist;
-      font-size: 7rem;
-      text-align: center;
-      line-height: 90%;
-      color: #fff;
-      letter-spacing: -0.1rem;
-      @media only screen and (max-width: 950px) {
-        font-size: 5rem;
+
+      @media only screen and (max-width: 850px) {
+        width: 100%;
+        font-size: 3.5rem;
+        letter-spacing: -1px;
       }
     }
 
-    .FeatureContainer {
+    .FeatureCard {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 4rem;
-      .Details {
+      gap: 3rem;
+      flex-direction: row;
+      @media only screen and (max-width: 850px) {
+        flex-direction: column;
+      }
+      .Image {
+        height: 29rem;
+      }
+      .MoreDetails {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 4rem;
-        .SubTitle {
-          font-weight: 600;
-          font-family: Urbanist;
-          font-size: 3rem;
-          text-align: center;
-          line-height: 90%;
-          color: #fff;
-          letter-spacing: -0.05rem;
-        }
-        .FeaturesList {
-          .Features {
-            color: #fff;
-            line-height: 200%;
-            font-size: 1.8rem;
-            &::marker {
-              font-size: 4rem;
-            }
+        color: #fff;
+        gap: 2rem;
+        .FeaturesLabel {
+          font-size: 2.5rem;
+          @media only screen and (max-width: 850px) {
+            font-size: 2rem;
           }
         }
       }
