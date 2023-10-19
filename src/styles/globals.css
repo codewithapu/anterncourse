@@ -6,6 +6,8 @@
   box-sizing: border-box;
   font-family: Inter;
   /* overflow: hidden; */
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 body{

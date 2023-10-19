@@ -21,7 +21,7 @@
     flex-direction: row;
 
     .AvatarContainer {
-      transform: perspective(400px) rotateY(3deg);
+      // transform: perspective(400px) rotateY(3deg);
       position: relative;
       .LearnerPic {
         z-index: 9;
@@ -32,14 +32,6 @@
         width: 100%;
       }
 
-      @media only screen and (max-width: 850px) {
-        transform: perspective(0px) rotateY(0deg);
-      }
-
-      @media only screen and (max-width: 600px) {
-        transform: perspective(0px) rotateY(0deg);
-        // width: 100%;
-      }
 
       .CompanyLogo {
         z-index: 10;
@@ -186,6 +178,22 @@
 
 // List Ends Here
 
+// FAQ Starts Here
+
+.FAQ {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0rem;
+
+  @media only screen and (max-width: 1150px) {
+    padding: 10rem 0rem;
+  }
+}
+
+// FAQ Ends Here
+
 .Wraper {
   display: flex;
   align-items: center;
@@ -204,7 +212,6 @@
     }
 
     .Hero {
-      // background-image: url(../../public/back.jpg);
       box-shadow: 200rem 4px 4px 0px rgba(0, 0, 0, 0.75) inset;
       width: 100%;
       background: linear-gradient(180deg, #080808 0%, #040a00 100%);
@@ -304,7 +311,7 @@
           flex-shrink: 0;
           background-color: #0800ff;
           color: #fffbfb;
-          font-family: Plus Jakarta Sans;
+
           font-family: Inter;
           font-size: 1.3rem;
           font-style: normal;
@@ -399,10 +406,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        color: #fff;
+        color: #ddd;
         gap: 2rem;
         .FeaturesLabel {
           font-size: 2.5rem;
+          font-weight: 500;
+          color: #ddd;
           @media only screen and (max-width: 850px) {
             font-size: 2rem;
           }
@@ -429,10 +438,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        color: #fff;
+        color: #ddd;
         gap: 2rem;
         .FeaturesLabel {
           font-size: 2.5rem;
+          font-weight: 500;
+          color: #ddd;
           @media only screen and (max-width: 850px) {
             font-size: 2rem;
           }
@@ -440,5 +451,34 @@
       }
     }
   }
-  
+
+  .FAQ{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    
+    .FAQLabel{
+      text-align: center;
+      font-family: Inter;
+      font-size: 7rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 135px */
+      letter-spacing: -2.5px;
+      color: #fff;
+      width: 50%;
+
+      background: linear-gradient(180deg, #fff 0.1%, rgba(227, 228, 255, 0) 355.66%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media only screen and (max-width: 850px) {
+        width: 100%;
+        font-size: 3.5rem;
+        letter-spacing: -1px;
+      }
+    }
+  }
 }

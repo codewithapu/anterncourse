@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
         </div>
 
         <p className={styles.Copyright}>
-          COPYRIGHT © 2020-23  | ANTERN
+          COPYRIGHT © 2020-23 • ANTERN
         </p>
 
       </footer>

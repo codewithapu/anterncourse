@@ -6,37 +6,38 @@ import Link from 'next/link'
 import Footer from '@/components/Footer'
 import Benefits from '@/components/Courses/Benefits';
 import List from '@/components/Courses/List'
+import FAQ from '@/components/Courses/FAQ'
+// Data Cards Starts
+
+const curriculum = [
+  "Design Patterns & SWE Principles",
+  "Understand AI: Essential Math Concepts",
+  "Comprehensive ML: Focus on Regression",
+  "Advanced ML: MLOps & Key Techniques"
+];
+
+const earn = [
+  "Get freelancing gigs worth of 100$+",
+  "No Unpaid Internships, Just Real Value",
+  "Pass an Exam, Secure Your Gig!"
+];
 
 
+const community = [
+  "Learn with 500+ Passionate Members",
+  "Connect with Google, IBM Experts",
+  "Community Learning: Your Success Key"
+];
+
+const research = [
+  "Collaborate on Research with Ayush Singh",
+  "Publish Your Own Research Paper",
+  "Fast-Track Hiring with Premier Projects"
+];
+
+// Data Cards Ends
 
 export default function Home() {
-
-  const curriculum = [
-    "Design Patterns & SWE Principles",
-    "Understand AI: Essential Math Concepts",
-    "Comprehensive ML: Focus on Regression",
-    "Advanced ML: MLOps & Key Techniques"
-  ];
-
-  const earn = [
-    "Get freelancing gigs worth of 100$+",
-    "No Unpaid Internships, Just Real Value",
-    "Pass an Exam, Secure Your Gig!"
-  ];
-
-
-  const community = [
-    "Learn with 500+ Passionate Members",
-    "Connect with Google, IBM Experts",
-    "Community Learning: Your Success Key"
-  ];
-
-  const research =[
-    "Collaborate on Research with Ayush Singh",
-    "Publish Your Own Research Paper",
-    "Fast-Track Hiring with Premier Projects"
-  ];
-
   return (
     <>
       <Head>
@@ -125,11 +126,16 @@ export default function Home() {
 
           </div>
 
+          <div className={styles.FAQ}>
+            <h1 className={styles.FAQLabel}>FAQs</h1>
+            <FAQ />
+          </div>
+
 
         </div>
 
       </div>
-      <Footer/>
+      <Footer />
     </>
   )
 }
